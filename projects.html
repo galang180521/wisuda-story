@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Sugihana.Story</title>
+    <link rel="stylesheet" href="projects.css">
+    <style>
+      /* Lightbox Styles - Updated for new color scheme */
+      .lightbox-overlay {
+        display: none;
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: rgba(81, 92, 85, 0.95);
+        backdrop-filter: blur(10px);
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+      }
+      .lightbox-overlay.active {
+        display: flex;
+      }
+      .lightbox-img {
+        max-width: 90vw;
+        max-height: 80vh;
+        border-radius: 20px;
+        box-shadow: 
+            0 25px 50px rgba(0,0,0,0.3),
+            0 0 0 3px rgba(249, 198, 31, 0.3);
+        background: white;
+        border: 2px solid rgba(249, 198, 31, 0.5);
+      }
+      .lightbox-close {
+        position: absolute;
+        top: 32px;
+        right: 48px;
+        font-size: 2.5rem;
+        color: #f9c61f;
+        cursor: pointer;
+        z-index: 10001;
+        background: rgba(255, 255, 255, 0.9);
+        border: 2px solid #f9c61f;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+      }
+      .lightbox-close:hover {
+        background: #f9c61f;
+        color: white;
+        transform: scale(1.1);
+      }
+      .lightbox-nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 2.5rem;
+        color: #f9c61f;
+        background: rgba(255, 255, 255, 0.9);
+        border: 2px solid #f9c61f;
+        border-radius: 50%;
+        cursor: pointer;
+        z-index: 10001;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        padding: 0;
+        line-height: 1;
+      }
+      .lightbox-nav:hover {
+        background: #f9c61f;
+        color: white;
+        transform: translateY(-50%) scale(1.1);
+      }
+      .lightbox-prev { left: 16px; }
+      .lightbox-next { right: 16px; }
+      @media (max-width: 600px) {
+        .lightbox-img { max-width: 98vw; max-height: 60vh; }
+        .lightbox-close { 
+          top: 12px; 
+          right: 18px; 
+          font-size: 2rem;
+          width: 50px;
+          height: 50px;
+        }
+        .lightbox-nav { 
+          font-size: 2rem;
+          width: 50px;
+          height: 50px;
+          padding: 0;
+        }
+      }
+    </style>
+</head>
+<body>
+    <!-- NAVIGATION BAR -->
+    <header class="navbar">
+      <div class="logo">
+        <span class="sugihana">Sugihana</span><span class="dot">.</span><span class="story">Story</span>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="sugihana.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html" class="active">Projects</a></li>
+          <li><a href="contacts.html">Contacts</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="content">
+        <section class="projects-gallery">
+            <div class="project-card" style="background:none;box-shadow:none;padding:0;border-radius:0;">
+                <img class="gallery-img" src="images/intan  (1 of 1).jpg" alt="Foto 1" style="max-width:100%;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.10);cursor:pointer;">
+            </div>
+            <div class="project-card" style="background:none;box-shadow:none;padding:0;border-radius:0;">
+                <img class="gallery-img" src="images/intan  (1 of 4).jpg" alt="Foto 2" style="max-width:100%;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.10);cursor:pointer;">
+            
+            
+            </div>
+            <div class="project-card" style="background:none;box-shadow:none;padding:0;border-radius:0;">
+                <img class="gallery-img" src="images/intan  (2 of 24).jpg" alt="Foto 5" style="max-width:100%;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.10);cursor:pointer;">
+            
+            </div>
+            <div class="project-card" style="background:none;box-shadow:none;padding:0;border-radius:0;">
+                <img class="gallery-img" src="images/intan  (3 of 24).jpg" alt="Foto 7" style="max-width:100%;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.10);cursor:pointer;">
+            </div>
+            <div class="project-card" style="background:none;box-shadow:none;padding:0;border-radius:0;">
+                <img class="gallery-img" src="images/intan  (4 of 4).jpg" alt="Foto 8" style="max-width:100%;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.10);cursor:pointer;">
+            
+            </div>
+            <div class="project-card" style="background:none;box-shadow:none;padding:0;border-radius:0;">
+                <img class="gallery-img" src="images/intan  (5 of 24).jpg" alt="Foto 10" style="max-width:100%;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.10);cursor:pointer;">
+            </div>
+            <div class="project-card" style="background:none;box-shadow:none;padding:0;border-radius:0;">
+                <img class="gallery-img" src="images/intan  (6 of 24).jpg" alt="Foto 11" style="max-width:100%;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.10);cursor:pointer;">
+            </div>
+            <div class="project-card" style="background:none;box-shadow:none;padding:0;border-radius:0;">
+                <img class="gallery-img" src="images/intan  (7 of 24).jpg" alt="Foto 12" style="max-width:100%;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.10);cursor:pointer;">
+            
+            </div>
+            <div class="project-card" style="background:none;box-shadow:none;padding:0;border-radius:0;">
+                <img class="gallery-img" src="images/intan  (11 of 24).jpg" alt="Foto 14" style="max-width:100%;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.10);cursor:pointer;">
+            </div>
+            <div class="project-card" style="background:none;box-shadow:none;padding:0;border-radius:0;">
+                <img class="gallery-img" src="images/intan  (12 of 24).jpg" alt="Foto 15" style="max-width:100%;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.10);cursor:pointer;">
+            </div>
+            <div class="project-card" style="background:none;box-shadow:none;padding:0;border-radius:0;">
+                <img class="gallery-img" src="images/intan  (13 of 24).jpg" alt="Foto 16" style="max-width:100%;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.10);cursor:pointer;">
+            </div>
+            <div class="project-card" style="background:none;box-shadow:none;padding:0;border-radius:0;">
+                <img class="gallery-img" src="images/intan  (14 of 24).jpg" alt="Foto 17" style="max-width:100%;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.10);cursor:pointer;">
+            </div>
+            <div class="project-card" style="background:none;box-shadow:none;padding:0;border-radius:0;">
+                <img class="gallery-img" src="images/intan  (15 of 24).jpg" alt="Foto 18" style="max-width:100%;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.10);cursor:pointer;">
+            </div>
+            <div class="project-card" style="background:none;box-shadow:none;padding:0;border-radius:0;">
+                <img class="gallery-img" src="images/intan  (16 of 24).jpg" alt="Foto 19" style="max-width:100%;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.10);cursor:pointer;">
+            </div>
+            <div class="project-card" style="background:none;box-shadow:none;padding:0;border-radius:0;">
+                <img class="gallery-img" src="images/intan  (17 of 24).jpg" alt="Foto 20" style="max-width:100%;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.10);cursor:pointer;">
+           
+            </div>
+            <div class="project-card" style="background:none;box-shadow:none;padding:0;border-radius:0;">
+                <img class="gallery-img" src="images/intan  (19 of 24).jpg" alt="Foto 22" style="max-width:100%;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.10);cursor:pointer;">
+            </div>
+            <div class="project-card" style="background:none;box-shadow:none;padding:0;border-radius:0;">
+                <img class="gallery-img" src="images/intan  (20 of 24).jpg" alt="Foto 23" style="max-width:100%;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.10);cursor:pointer;">
+            </div>
+            <div class="project-card" style="background:none;box-shadow:none;padding:0;border-radius:0;">
+                <img class="gallery-img" src="images/intan  (21 of 24).jpg" alt="Foto 24" style="max-width:100%;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.10);cursor:pointer;">
+            </div>
+            <div class="project-card" style="background:none;box-shadow:none;padding:0;border-radius:0;">
+                <img class="gallery-img" src="images/intan  (22 of 24).jpg" alt="Foto 25" style="max-width:100%;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.10);cursor:pointer;">
+            </div>
+            <div class="project-card" style="background:none;box-shadow:none;padding:0;border-radius:0;">
+                <img class="gallery-img" src="images/intan  (23 of 24).jpg" alt="Foto 26" style="max-width:100%;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.10);cursor:pointer;">
+            </div>
+            <div class="project-card" style="background:none;box-shadow:none;padding:0;border-radius:0;">
+                <img class="gallery-img" src="images/intan new (4 of 7).jpg" alt="Foto 28" style="max-width:100%;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.10);cursor:pointer;">
+            
+            </div>
+            <!-- Gambar dari wili/ -->
+            <div class="project-card" style="background:none;box-shadow:none;padding:0;border-radius:0;">
+    <img class="gallery-img" src="C:\Users\Windows 11\Documents\sugihana story\web volder\wili\galang udah 20 (1 of 1).jpg" alt="Wili 1" style="max-width:100%;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.10);cursor:pointer;">
+</div>
+<div class="project-card" style="background:none;box-shadow:none;padding:0;border-radius:0;">
+    <img class="gallery-img" src="C:\Users\Windows 11\Documents\sugihana story\web volder\wili\galang udah 20 (6 of 70).jpg" alt="Wili 6" style="max-width:100%;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.10);cursor:pointer;">
+</div>
+<div class="project-card" style="background:none;box-shadow:none;padding:0;border-radius:0;">
+    <img class="gallery-img" src="C:\Users\Windows 11\Documents\sugihana story\web volder\wili\galang udah 20 (7 of 70).jpg" alt="Wili 7" style="max-width:100%;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.10);cursor:pointer;">
+</div>
+<div class="project-card" style="background:none;box-shadow:none;padding:0;border-radius:0;">
+    <img class="gallery-img" src="C:\Users\Windows 11\Documents\sugihana story\web volder\wili\galang udah 20 (10 of 70).jpg" alt="Wili 10" style="max-width:100%;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.10);cursor:pointer;">
+</div>
+<div class="project-card" style="background:none;box-shadow:none;padding:0;border-radius:0;">
+    <img class="gallery-img" src="C:\Users\Windows 11\Documents\sugihana story\web volder\wili\galang udah 20 (12 of 70).jpg" alt="Wili 12" style="max-width:100%;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.10);cursor:pointer;">
+</div>
+<div class="project-card" style="background:none;box-shadow:none;padding:0;border-radius:0;">
+    <img class="gallery-img" src="C:\Users\Windows 11\Documents\sugihana story\web volder\wili\galang udah 20 (13 of 70).jpg" alt="Wili 13" style="max-width:100%;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.10);cursor:pointer;">
+</div>
+<div class="project-card" style="background:none;box-shadow:none;padding:0;border-radius:0;">
+    <img class="gallery-img" src="C:\Users\Windows 11\Documents\sugihana story\web volder\wili\galang udah 20 (33 of 70).jpg" alt="Wili 33" style="max-width:100%;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.10);cursor:pointer;">
+</div>
+<div class="project-card" style="background:none;box-shadow:none;padding:0;border-radius:0;">
+    <img class="gallery-img" src="C:\Users\Windows 11\Documents\sugihana story\web volder\wili\galang udah 20 (34 of 70).jpg" alt="Wili 34" style="max-width:100%;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.10);cursor:pointer;">
+</div>
+<div class="project-card" style="background:none;box-shadow:none;padding:0;border-radius:0;">
+    <img class="gallery-img" src="C:\Users\Windows 11\Documents\sugihana story\web volder\wili\galang udah 20 (39 of 70).jpg" alt="Wili 39" style="max-width:100%;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.10);cursor:pointer;">
+</div>
+<div class="project-card" style="background:none;box-shadow:none;padding:0;border-radius:0;">
+    <img class="gallery-img" src="C:\Users\Windows 11\Documents\sugihana story\web volder\wili\galang udah 20 (41 of 70).jpg" alt="Wili 41" style="max-width:100%;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.10);cursor:pointer;">
+</div>
+<div class="project-card" style="background:none;box-shadow:none;padding:0;border-radius:0;">
+    <img class="gallery-img" src="C:\Users\Windows 11\Documents\sugihana story\web volder\wili\galang udah 20 (44 of 70).jpg" alt="Wili 44" style="max-width:100%;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.10);cursor:pointer;">
+</div>
+<div class="project-card" style="background:none;box-shadow:none;padding:0;border-radius:0;">
+    <img class="gallery-img" src="C:\Users\Windows 11\Documents\sugihana story\web volder\wili\galang udah 20 (51 of 70).jpg" alt="Wili 51" style="max-width:100%;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.10);cursor:pointer;">
+</div>
+
+            <!-- ...lanjutkan untuk semua file di folder wili... -->
+             <div class="project-card" style="background:none;box-shadow:none;padding:0;border-radius:0;">
+    <img class="gallery-img" src="C:\Users\Windows 11\Documents\sugihana story\web volder\novri\galang udah 20 (6 of 76).jpg" alt="Novri 6" style="max-width:100%;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.10);cursor:pointer;">
+</div>
+<div class="project-card" style="background:none;box-shadow:none;padding:0;border-radius:0;">
+    <img class="gallery-img" src="C:\Users\Windows 11\Documents\sugihana story\web volder\novri\galang udah 20 (9 of 40).jpg" alt="Novri 9" style="max-width:100%;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.10);cursor:pointer;">
+</div>
+<div class="project-card" style="background:none;box-shadow:none;padding:0;border-radius:0;">
+    <img class="gallery-img" src="C:\Users\Windows 11\Documents\sugihana story\web volder\novri\galang udah 20 (10 of 40).jpg" alt="Novri 10" style="max-width:100%;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.10);cursor:pointer;">
+</div>
+<div class="project-card" style="background:none;box-shadow:none;padding:0;border-radius:0;">
+    <img class="gallery-img" src="C:\Users\Windows 11\Documents\sugihana story\web volder\novri\galang udah 20 (12 of 40).jpg" alt="Novri 12a" style="max-width:100%;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.10);cursor:pointer;">
+</div>
+<div class="project-card" style="background:none;box-shadow:none;padding:0;border-radius:0;">
+    <img class="gallery-img" src="C:\Users\Windows 11\Documents\sugihana story\web volder\novri\galang udah 20 (12 of 76).jpg" alt="Novri 12b" style="max-width:100%;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.10);cursor:pointer;">
+</div>
+<div class="project-card" style="background:none;box-shadow:none;padding:0;border-radius:0;">
+    <img class="gallery-img" src="C:\Users\Windows 11\Documents\sugihana story\web volder\novri\galang udah 20 (14 of 76).jpg" alt="Novri 14" style="max-width:100%;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.10);cursor:pointer;">
+</div>
+<div class="project-card" style="background:none;box-shadow:none;padding:0;border-radius:0;">
+    <img class="gallery-img" src="C:\Users\Windows 11\Documents\sugihana story\web volder\novri\galang udah 20 (16 of 76).jpg" alt="Novri 16" style="max-width:100%;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.10);cursor:pointer;">
+</div>
+<div class="project-card" style="background:none;box-shadow:none;padding:0;border-radius:0;">
+    <img class="gallery-img" src="C:\Users\Windows 11\Documents\sugihana story\web volder\novri\galang udah 20 (20 of 76).jpg" alt="Novri 20" style="max-width:100%;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.10);cursor:pointer;">
+</div>
+
+        </section>
+    </main>
+
+    <!-- Lightbox Overlay -->
+    <div class="lightbox-overlay" id="lightboxOverlay">
+      <button class="lightbox-close" id="lightboxClose" title="Tutup">&times;</button>
+      <button class="lightbox-nav lightbox-prev" id="lightboxPrev" title="Sebelumnya" style="display:none">&#8592;</button>
+      <img class="lightbox-img" id="lightboxImg" src="" alt="Preview">
+      <button class="lightbox-nav lightbox-next" id="lightboxNext" title="Selanjutnya" style="display:none">&#8594;</button>
+    </div>
+
+    <script>
+      // Lightbox gallery logic
+      const images = Array.from(document.querySelectorAll('.gallery-img'));
+      const overlay = document.getElementById('lightboxOverlay');
+      const lightboxImg = document.getElementById('lightboxImg');
+      const closeBtn = document.getElementById('lightboxClose');
+      const prevBtn = document.getElementById('lightboxPrev');
+      const nextBtn = document.getElementById('lightboxNext');
+      let currentIdx = 0;
+
+      function showLightbox(idx) {
+        currentIdx = idx;
+        lightboxImg.src = images[idx].src;
+        overlay.classList.add('active');
+        prevBtn.style.display = (images.length > 1 && idx > 0) ? 'block' : 'none';
+        nextBtn.style.display = (images.length > 1 && idx < images.length - 1) ? 'block' : 'none';
+      }
+      images.forEach((img, idx) => {
+        img.addEventListener('click', () => showLightbox(idx));
+      });
+      closeBtn.addEventListener('click', () => overlay.classList.remove('active'));
+      overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) overlay.classList.remove('active');
+      });
+      prevBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (currentIdx > 0) showLightbox(currentIdx - 1);
+      });
+      nextBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (currentIdx < images.length - 1) showLightbox(currentIdx + 1);
+      });
+      document.addEventListener('keydown', (e) => {
+        if (!overlay.classList.contains('active')) return;
+        if (e.key === 'Escape') overlay.classList.remove('active');
+        if (e.key === 'ArrowLeft' && currentIdx > 0) showLightbox(currentIdx - 1);
+        if (e.key === 'ArrowRight' && currentIdx < images.length - 1) showLightbox(currentIdx + 1);
+      });
+    </script>
+</body>
+</html>
+
+C:\Users\Windows 11\Documents\sugihana story\web volder\images\intan  (1 of 1).jpg

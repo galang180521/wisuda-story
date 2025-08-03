@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacts | Sugihana.Story</title>
+    <link rel="stylesheet" href="sugihana.css" />
+    <style>
+      body {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #ffe386, #d7d07a);
+        font-family: Arial, sans-serif;
+        /* Hapus display: flex, flex-direction, align-items, justify-content agar navbar full width */
+      }
+      .linktree-container {
+        margin-top: 80px;
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 20px;
+        box-shadow: 0 4px 24px rgba(81, 92, 85, 0.1);
+        padding: 40px 30px 30px 30px;
+        max-width: 350px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .linktree-avatar {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 18px;
+        border: 3px solid #efc129;
+        box-shadow: 0 2px 8px rgba(81, 92, 85, 0.1);
+      }
+      .linktree-title {
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: #515c55;
+        margin-bottom: 10px;
+      }
+      .linktree-desc {
+        color: #888;
+        font-size: 1rem;
+        margin-bottom: 24px;
+        text-align: center;
+      }
+      .linktree-links {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+      }
+      .linktree-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        background: #fff;
+        border: 2px solid #efc129;
+        border-radius: 12px;
+        padding: 14px 0;
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #515c55;
+        text-decoration: none;
+        transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+        box-shadow: 0 2px 8px rgba(81, 92, 85, 0.06);
+      }
+      .linktree-link:hover {
+        background: #efc129;
+        color: #fff;
+        box-shadow: 0 4px 16px rgba(239, 193, 41, 0.15);
+      }
+      .linktree-link svg {
+        width: 24px;
+        height: 24px;
+        fill: #efc129;
+        transition: fill 0.2s;
+      }
+      .linktree-link:hover svg {
+        fill: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAVIGATION BAR -->
+    <header class="navbar">
+      <div class="logo">
+        <span class="sugihana">Sugihana</span><span class="dot">.</span
+        ><span class="story">Story</span>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="sugihana.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contacts.html" class="active">Contacts</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="linktree-container">
+        <img
+          src="C:\Users\Windows 11\Downloads\DSC_0099.JPG"
+          alt="Avatar"
+          class="linktree-avatar"
+        />
+        <div class="linktree-title">Galang Sugihana</div>
+        <div class="linktree-desc">Hubungi saya melalui link di bawah ini:</div>
+        <div class="linktree-links">
+          <a
+            class="linktree-link"
+            href="https://www.instagram.com/sugihanastory_?igsh=eHJ6ODhydnF3bGw%3D&utm_source=qr"
+          >
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.9.2 2.3.4.5.2.8.4 1.2.8.4.4.6.7.8 1.2.2.4.3 1.1.4 2.3.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.9-.4 2.3-.2.5-.4.8-.8 1.2-.4.4-.7.6-1.2.8-.4.2-1.1.3-2.3.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.9-.2-2.3-.4-.5-.2-.8-.4-1.2-.8-.4-.4-.6-.7-.8-1.2-.2-.4-.3-1.1-.4-2.3C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.9.4-2.3.2-.5.4-.8.8-1.2.4-.4.7-.6 1.2-.8.4-.2 1.1-.3 2.3-.4C8.4 2.2 8.8 2.2 12 2.2zm0-2.2C8.7 0 8.3 0 7 .1 5.7.2 4.7.4 3.9.7c-.8.3-1.5.7-2.1 1.3C1.1 2.6.7 3.3.4 4.1.1 4.9 0 5.9 0 7.2c-.1 1.3-.1 1.7-.1 4.8s0 3.5.1 4.8c.1 1.3.2 2.3.4 3.1.3.8.7 1.5 1.3 2.1.6.6 1.3 1 2.1 1.3.8.3 1.8.4 3.1.4 1.3.1 1.7.1 4.8.1s3.5 0 4.8-.1c1.3-.1 2.3-.2 3.1-.4.8-.3 1.5-.7 2.1-1.3.6-.6 1-1.3 1.3-2.1.3-.8.4-1.8.4-3.1.1-1.3.1-1.7.1-4.8s0-3.5-.1-4.8c-.1-1.3-.2-2.3-.4-3.1-.3-.8-.7-1.5-1.3-2.1C21.4 1.1 20.7.7 19.9.4c-.8-.3-1.8-.4-3.1-.4C15.3 0 14.9 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm7.8-10.4a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 0 0 0-2.8z"
+              />
+            </svg>
+            Instagram
+          </a>
+          <a
+            class="linktree-link"
+            href="https://wa.me/087721333765"
+            target="_blank"
+          >
+            <svg viewBox="0 0 32 32">
+              <path
+                d="M16 2.938c-7.364 0-13.344 5.98-13.344 13.344 0 2.355.617 4.652 1.785 6.668l-1.902 6.961 7.145-1.875c1.949 1.066 4.145 1.629 6.316 1.629h.001c7.364 0 13.344-5.98 13.344-13.344s-5.98-13.344-13.344-13.344zm6.938 18.668c-.293.822-1.719 1.602-2.363 1.707-.604.098-1.389.139-2.238-.139-.516-.164-1.18-.385-2.037-.756-3.594-1.547-5.941-5.16-6.121-5.406-.18-.246-1.463-1.949-1.463-3.727 0-1.779.926-2.652 1.256-3.016.33-.363.719-.455.957-.455.238 0 .479.002.686.013.221.012.516-.083.807.617.293.703.996 2.426 1.084 2.602.09.18.148.393.027.639-.121.246-.182.393-.357.604-.18.217-.381.484-.545.652-.18.18-.369.375-.158.738.217.363.963 1.594 2.066 2.582 1.42 1.266 2.617 1.66 2.98 1.848.363.18.574.152.787-.09.217-.246.902-1.051 1.145-1.414.238-.363.482-.297.807-.18.33.121 2.086.984 2.441 1.162.357.18.594.266.682.414.09.148.09.852-.203 1.674z"
+              />
+            </svg>
+            WhatsApp
+          </a>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
