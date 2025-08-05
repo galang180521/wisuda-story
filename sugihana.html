@@ -1,97 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sugihana Story</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    /* Tambahan opsional: animasi toggle menu mobile */
-    .menu-toggle {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-      gap: 5px;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | Sugihana.story</title>
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="sugihana.css" />
+  </head>
+  <body>
+    <!-- NAVIGATION BAR -->
+    <header class="navbar">
+      <div class="logo">
+        <span class="sugihana">Sugihana</span><span class="dot">.</span><span class="story">Story</span>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="sugihana.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contacts.html">Contacts</a></li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
 
-    .menu-toggle span {
-      width: 25px;
-      height: 3px;
-      background-color: #515c55;
-      border-radius: 2px;
-    }
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Hi, welcome to Sugihana.Story</h1>
+        <p>Don't hesitate, always immortalize your precious moments with us.</p>
+        <a href="projects.html" class="btn-primary">View My Work</a>
+      </div>
+    </section>
 
-    @media (max-width: 768px) {
-      .menu-toggle {
-        display: flex;
-      }
-
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 70px;
-        right: 50px;
-        background: white;
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-        padding: 10px;
-        z-index: 99;
-      }
-
-      .nav-links.show {
-        display: flex;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <!-- ==== NAVBAR ==== -->
-  <header class="navbar">
-    <div class="logo">
-      <span class="sugihana">Sugihana</span><span class="dot">.</span><span class="story">Story</span>
-    </div>
-
-    <div class="menu-toggle" id="menu-toggle">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-
-    <nav>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="sugihana.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contacts.html">Contacts</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- ==== HERO SECTION ==== -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Welcome to Sugihana.Story</h1>
-      <p>Your source of inspiration and creativity.</p>
-      <a href="projects.html" class="btn-primary">View Projects</a>
-    </div>
-  </section>
-
-  <!-- ==== FOOTER ==== -->
-  <footer>
-    &copy; 2025 Sugihana.Story. All rights reserved.
-  </footer>
-
-  <!-- ==== JAVASCRIPT MENU TOGGLE ==== -->
-  <script>
-    const menuToggle = document.getElementById('menu-toggle');
-    const navLinks = document.getElementById('nav-links');
-
-    menuToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('show');
-    });
-  </script>
-
-</body>
+    <script src="navbar.js"></script>
+  </body>
 </html>
