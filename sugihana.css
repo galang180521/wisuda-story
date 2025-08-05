@@ -1,0 +1,115 @@
+/* ==== RESET CSS ==== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ffe386, #d7d07a);
+    color: #515c55;
+}
+
+/* ==== ANIMASI MASUK HERO ==== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==== HERO SECTION ==== */
+.hero {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    color: #515c55;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: fadeInUp 1s 0.2s forwards;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeInUp 1s 0.5s forwards;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #fff;
+    color: #515c55;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s, box-shadow 0.2s, transform 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background: #987811;
+    color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0 4px 16px rgba(0,123,255,0.15);
+    outline: none;
+}
+
+.btn-primary:active {
+    transform: scale(0.97);
+    box-shadow: 0 1px 4px rgba(0,123,255,0.10);
+}
+
+/* ==== FOOTER ==== */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+    color: #555;
+    font-size: 0.9rem;
+    border-top: 1px solid #ddd;
+}
+
+/* ==== RESPONSIVE DESIGN ==== */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    .btn-primary {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+    }
+}
