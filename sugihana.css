@@ -1,50 +1,38 @@
 /* ==== RESET CSS ==== */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
 body {
-    min-height: 100vh;
-    background: linear-gradient(135deg, #ffe386, #d7d07a);
-    color: #fff;
-}
-
-/* ==== ANIMASI MASUK HERO ==== */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffe386, #d7d07a);
+  color: #fff;
 }
 
 /* ==== NAVBAR ==== */
 .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 50px;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 20px rgba(81, 92, 85, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    border-bottom: 2px solid rgba(249, 198, 31, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 50px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(81, 92, 85, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 2px solid rgba(249, 198, 31, 0.3);
 }
 
 /* === LOGO === */
 .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    transition: transform 0.3s;
-    cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: transform 0.3s;
+  cursor: pointer;
 }
 .logo .sugihana { color: #515c55; }
 .logo .dot { color: black; }
@@ -53,132 +41,177 @@ body {
 
 /* === NAVIGATION LINKS === */
 .nav-links {
-    display: flex;
-    gap: 24px;
-    list-style: none;
+  display: flex;
+  gap: 24px;
+  list-style: none;
 }
 .nav-links a {
-    text-decoration: none;
-    color: #555;
-    font-weight: bold;
-    transition: color 0.3s;
-    position: relative;
-    padding: 2px 0;
-    border-radius: 0;
-    background: none;
+  text-decoration: none;
+  color: #555;
+  font-weight: bold;
+  transition: color 0.3s;
+  position: relative;
+  padding: 2px 0;
+  background: none;
 }
 .nav-links a::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background: #efc129;
-    transition: width 0.3s;
-    position: absolute;
-    left: 0;
-    bottom: -2px;
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #efc129;
+  transition: width 0.3s;
+  position: absolute;
+  left: 0;
+  bottom: -2px;
 }
 .nav-links a:hover,
 .nav-links a.active {
-    color: #515c55;
-    background: none;
+  color: #515c55;
 }
 .nav-links a:hover::after,
 .nav-links a.active::after {
-    width: 100%;
+  width: 100%;
 }
 .nav-links a.active,
 .nav-links a:hover {
-    background: none !important;
-    color: #515c55 !important;
+  background: none !important;
+  color: #515c55 !important;
+}
+
+/* ==== MOBILE MENU ==== */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: #515c55;
+  border-radius: 2px;
+  transition: 0.3s ease;
+}
+
+/* Hide nav links on mobile by default */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 50px;
+    background: rgba(255, 255, 255, 0.97);
+    flex-direction: column;
+    gap: 12px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    display: none;
+    z-index: 9;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
 }
 
 /* ==== HERO SECTION ==== */
 .hero {
-    min-height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: none;
-    color: #515c55;
-    text-align: center;
-    padding: 0 20px;
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  color: #515c55;
+  text-align: center;
+  padding: 0 20px;
 }
 
 .hero-content h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-    opacity: 0;
-    animation: fadeInUp 1s 0.2s forwards;
+  font-size: 3rem;
+  margin-bottom: 10px;
+  opacity: 0;
+  animation: fadeInUp 1s 0.2s forwards;
 }
 
 .hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeInUp 1s 0.5s forwards;
+}
+
+/* ==== ANIMASI MASUK HERO ==== */
+@keyframes fadeInUp {
+  from {
     opacity: 0;
-    animation: fadeInUp 1s 0.5s forwards;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
+/* ==== BUTTON STYLE ==== */
 .btn-primary {
-    display: inline-block;
-    padding: 12px 30px;
-    background: #fff;
-    color: #515c55;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: 0.3s, box-shadow 0.2s, transform 0.2s;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    cursor: pointer;
-    border: none;
+  display: inline-block;
+  padding: 12px 30px;
+  background: #fff;
+  color: #515c55;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s, box-shadow 0.2s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  cursor: pointer;
+  border: none;
 }
-
 .btn-primary:hover,
 .btn-primary:focus {
-    background: #987811;
-    color: #fff;
-    transform: scale(1.05);
-    box-shadow: 0 4px 16px rgba(0,123,255,0.15);
-    outline: none;
+  background: #987811;
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 4px 16px rgba(0,123,255,0.15);
+  outline: none;
 }
-
 .btn-primary:active {
-    transform: scale(0.97);
-    box-shadow: 0 1px 4px rgba(0,123,255,0.10);
+  transform: scale(0.97);
+  box-shadow: 0 1px 4px rgba(0,123,255,0.10);
 }
 
 /* ==== FOOTER ==== */
 footer {
-    text-align: center;
-    padding: 20px;
-    background: #fff;
-    color: #555;
-    font-size: 0.9rem;
-    border-top: 1px solid #ddd;
+  text-align: center;
+  padding: 20px;
+  background: #fff;
+  color: #555;
+  font-size: 0.9rem;
+  border-top: 1px solid #ddd;
 }
 
-/* ==== RESPONSIVE DESIGN ==== */
+/* ==== RESPONSIVE HERO ==== */
 @media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero-content p {
-        font-size: 1.1rem;
-    }
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  .hero-content p {
+    font-size: 1.1rem;
+  }
 }
-
 @media (max-width: 600px) {
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-
-    .hero-content p {
-        font-size: 1rem;
-    }
-
-    .btn-primary {
-        padding: 10px 25px;
-        font-size: 0.9rem;
-    }
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+  .btn-primary {
+    padding: 10px 25px;
+    font-size: 0.9rem;
+  }
 }
