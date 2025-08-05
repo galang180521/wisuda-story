@@ -112,4 +112,18 @@ body {
   .personal-info {
     padding: 15px;
   }
+}
+
+@media (max-width: 600px) {
+  .about-container {
+    padding: 20px 15px;
+  }
+  
+  .about-text h1 {
+    font-size: 1.3rem;
+  }
+  
+  .about-text p {
+    font-size: 1rem;
+  }
 } 
