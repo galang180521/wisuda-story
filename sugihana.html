@@ -1,112 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home | Sugihana.story</title>
-    
-    <!-- External Stylesheets -->
-    <link rel="stylesheet" href="navbar.css" />
-    <link rel="stylesheet" href="sugihana.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sugihana Story</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-    <!-- Inline CSS -->
-    <style>
-      /* ==== NAVBAR ==== */
-      .navbar {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 20px 50px;
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
-        box-shadow: 0 4px 20px rgba(81, 92, 85, 0.1);
-        position: sticky;
-        top: 0;
-        z-index: 10;
-        border-bottom: 2px solid rgba(249, 198, 31, 0.3);
-      }
+  <!-- ==== NAVBAR ==== -->
+  <header class="navbar">
+    <div class="logo">
+      <span class="sugihana">Sugihana</span><span class="dot">.</span><span class="story">Story</span>
+    </div>
 
-      /* === LOGO === */
-      .logo {
-        font-size: 1.5rem;
-        font-weight: bold;
-        transition: transform 0.3s;
-        cursor: pointer;
-      }
-      .logo .sugihana { color: #515c55; }
-      .logo .dot { color: black; }
-      .logo .story { color: #efc129; }
-      .logo:hover { transform: scale(1.08) rotate(-2deg); }
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
 
-      /* === NAVIGATION LINKS === */
-      .nav-links {
-        display: flex;
-        gap: 24px;
-        list-style: none;
-      }
-      .nav-links a {
-        text-decoration: none;
-        color: #555;
-        font-weight: bold;
-        transition: color 0.3s;
-        position: relative;
-        padding: 2px 0;
-        border-radius: 0;
-        background: none;
-      }
-      .nav-links a::after {
-        content: '';
-        display: block;
-        width: 0;
-        height: 2px;
-        background: #efc129;
-        transition: width 0.3s;
-        position: absolute;
-        left: 0;
-        bottom: -2px;
-      }
-      .nav-links a:hover,
-      .nav-links a.active {
-        color: #515c55;
-        background: none;
-      }
-      .nav-links a:hover::after,
-      .nav-links a.active::after {
-        width: 100%;
-      }
-      .nav-links a.active,
-      .nav-links a:hover {
-        background: none !important;
-        color: #515c55 !important;
-      }
-    </style>
-  </head>
+    <nav>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="sugihana.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contacts.html">Contacts</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <body>
-    <!-- NAVIGATION BAR -->
-    <header class="navbar">
-      <div class="logo">
-        <span class="sugihana">Sugihana</span><span class="dot">.</span><span class="story">Story</span>
-      </div>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="sugihana.html" class="active">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="contacts.html">Contacts</a></li>
-        </ul>
-      </nav>
-    </header>
+  <!-- ==== HERO SECTION ==== -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to Sugihana.Story</h1>
+      <p>Your source of inspiration and creativity.</p>
+      <a href="projects.html" class="btn-primary">View Projects</a>
+    </div>
+  </section>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
-      <div class="hero-content">
-        <h1>Hi, welcome to Sugihana.Story</h1>
-        <p>Don't hesitate, always immortalize your precious moments with us.</p>
-        <a href="projects.html" class="btn-primary">View My Work</a>
-      </div>
-    </section>
+  <!-- ==== FOOTER ==== -->
+  <footer>
+    &copy; 2025 Sugihana.Story. All rights reserved.
+  </footer>
 
-    <script src="navbar.js"></script>
-  </body>
+  <!-- ==== JAVASCRIPT MENU TOGGLE ==== -->
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
+
+</body>
 </html>
